@@ -1,5 +1,5 @@
 // Define a function to convert 24h time to words
-function timeWord(timeStr) {
+function timeToWords(timeStr) {
 	// Split the time string into hours and minutes
 	const timeParts = timeStr.split(':');
 	const hours = parseInt(timeParts[0], 10); // Extract hours as an integer // use decimal system
@@ -40,10 +40,7 @@ function timeWord(timeStr) {
 	const period = hours < 12 ? 'am' : 'pm';
 
 	// Construct the final time in words
-	return '${hourWord ${minuteWord} ${period}'.trim(); // Trim any extra spaces
+	return `${hourWord} ${minuteWord} ${period}`.trim(); // Use backticks for string interpolation
+	// Trim any extra spaces
 }
 
-// Tests
-
-
-// Run tests and output results
